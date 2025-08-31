@@ -1,0 +1,42 @@
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.82);
+}
+
+.img_name{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.img_name img{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+
+h1{
+    cursor: pointer;
+}
+
+.nav{
+    display:  flex;
+    list-style: none;
+    gap:15px;
+}
+
+.nav li{
+  cursor: pointer;
+  transition: box-shadow .3s ease;
+}
+
+
+ .nav li:hover{
+    box-shadow: 0 2px 0 0 white;
+} 
+

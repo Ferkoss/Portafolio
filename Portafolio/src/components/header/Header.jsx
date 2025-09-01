@@ -1,9 +1,13 @@
 import styles from "./header.module.css"
+import fotoPerfil from "../../../public/foto-perfil.jpg"
 const Header = ()=>{
+    const navCV= ()=>{
+        open("https://www.canva.com/design/DAFwfmZPpQg/xigmmOPFLFMk3tyVvfMIiA/edit?utm_content=DAFwfmZPpQg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton","_blank")
+    }
     return(
         <header>
             <div className={styles.img_name}>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/A._Schwarzenegger.jpg/250px-A._Schwarzenegger.jpg" alt="" />
+                <img src={fotoPerfil} alt="" />
                 <h1>
                     Fernando Koss
                 </h1>
@@ -13,7 +17,7 @@ const Header = ()=>{
                 <li>Sobre Mi</li>
                 <li>Educacion</li>
                 <li>Contacto</li>
-                <li>CV</li>
+                <li onClick={navCV} >CV</li>
             </ul>
         </header>
     )

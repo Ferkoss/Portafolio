@@ -10,6 +10,11 @@ main{
     gap: 100px;
     padding: 30px 20px;
     background-color: rgba(0, 0, 0, 0.8);
+    border-radius:20px ;
+    box-shadow: 0 0 50px white;
+    animation: sombra;
+    animation-duration: 7s; 
+    animation-iteration-count: infinite;
 
 }
 
@@ -48,7 +53,20 @@ main div h2{
 
 
 
-
+@keyframes sombra {
+        0%{
+        box-shadow: 0 0 80px red;
+    }
+    33%{
+        box-shadow: 0 0 80px green;
+    }
+    66%{
+        box-shadow: 0 0 80px blue;
+    }
+    100%{
+        box-shadow: 0 0 80px red;
+    }
+}
 
 
 @keyframes aparece {

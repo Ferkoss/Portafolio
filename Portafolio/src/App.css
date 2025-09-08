@@ -27,11 +27,21 @@ body{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: monospace, sans-serif;
+  color:#ccc;
+
 }
 
+input{
+  color: black;
+}
 #root{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+:root{
+  --tiempoRGB:7s;
 }

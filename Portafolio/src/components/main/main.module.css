@@ -31,19 +31,21 @@ main {
     border-radius: 20px;
     line-height: 30px;
     transform: scale(1);
-    animation: aparece linear, desaparece linear;
-    animation-timeline: view();
-    animation-range: entry 0, exit 0;
     cursor: pointer;
     color: #ccc;
     transition: transform 1s;
     background-position: 0% 50%, 100% 50%;
     transition: transform 1s;
-    width: 95%;
-
+    width: 100%;
+    
 }
 
-
+.divAnimation{
+    animation: aparece linear, desaparece linear;
+    animation-timeline: view();
+    animation-range: entry 0, exit 0;
+    width: 95%;
+}
 
 
 

@@ -1,0 +1,308 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #ccc;
+    width: 95%;
+    margin: 50px 0;
+    gap: 100px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px white;
+    animation: sombra;
+    animation-duration: var(--tiempoRGB);
+    animation-iteration-count: infinite;
+
+}
+
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid #ccc;
+    padding: 10px;
+    padding-bottom: 30px;
+    gap: 20px;
+    min-height: 200px;
+    border-radius: 20px;
+    line-height: 30px;
+    transform: scale(1);
+    cursor: pointer;
+    color: #ccc;
+    background-position: 0% 50%, 100% 50%;
+    transition: transform 1s,background-color 1s;
+    width: 100%;
+    
+}
+
+.divAnimation{
+    animation: aparece linear, desaparece linear;
+    animation-timeline: view();
+    animation-range: entry 0, exit 0;
+    width: 95%;
+}
+
+
+
+@keyframes borderGlow {
+    0% {
+        background-position: 0% 50%, 0% 50%;
+    }
+
+    50% {
+        background-position: 0% 50%, 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%, 0% 50%;
+    }
+}
+
+
+/* main div::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: linear-gradient(90deg, red, green, blue, red);
+  background-size: 400% 400%;
+  animation: borderGlow 6s linear infinite;
+  z-index: -10;
+  border-radius: inherit;
+} */
+
+
+.content:hover {
+    transition: transform 1s, box-shadow .5s;
+    transform: scale(1.01);
+}
+
+.content-dark:hover{
+    border: 3px solid transparent;
+    background:
+        linear-gradient(#000, #000) padding-box,
+        linear-gradient(90deg, red, green, blue, red) border-box;
+    background-size: 100% 100%, 300% 300%;
+    animation: borderGlow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.content-light:hover{
+    
+    border: 3px solid transparent !important;
+    background:
+        linear-gradient(#ccc, #ccc) padding-box,
+        linear-gradient(90deg, #00b359, #ff6600, #00ffff, #00b359) border-box;
+    background-size: 100% 100%, 300% 300%;
+    animation: borderGlow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.content-80s{
+    animation-name: bordes80s;
+    animation-duration: var(--tiempoRGB);
+    animation-iteration-count: infinite;
+}
+
+.content-matrix:hover{
+    transform: box-shadow 1s;
+    box-shadow: 0 0 100px green;
+}
+
+
+.divEdu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.divEdu div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.divEdu img {
+    align-self: center;
+    filter: drop-shadow(0 0 20px white);
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+}
+
+.content h3 {
+    font-size: 23px;
+}
+
+.divImg {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.divImg img {
+    height: 50px;
+    filter: grayscale(1);
+    transition: filter 1s;
+}
+
+.divImg div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s;
+}
+
+.divImg div:hover {
+    transform: scale(1.5);
+    transition: transform 1s;
+}
+
+.divImg img:hover {
+    filter: none;
+    transition: filter 1s;
+}
+
+/* main div:first-child,main div:hover{
+    animation: bordesRGB;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: transform 1s,box-shadow .5s;
+    transform: scale(1.01);
+} */
+
+
+
+main div p {
+    font-size: 20px;
+}
+
+main div h2 {
+    font-size: 30px;
+}
+
+
+
+@keyframes sombra {
+    0% {
+        box-shadow: 0 0 80px red;
+    }
+
+    33% {
+        box-shadow: 0 0 80px green;
+    }
+
+    66% {
+        box-shadow: 0 0 80px blue;
+    }
+
+    100% {
+        box-shadow: 0 0 80px red;
+    }
+}
+
+@keyframes sombraLight {
+    0% {
+        box-shadow: 0 0 80px #00b359;
+    }
+
+    33% {
+        box-shadow: 0 0 80px #ff6600;
+    }
+
+    66% {
+        box-shadow: 0 0 80px #00ffff;
+    }
+
+    100% {
+        box-shadow: 0 0 80px #00b359;
+    }
+}
+
+
+
+
+@keyframes aparece {
+    from {
+        opacity: 0;
+        scale: .5;
+
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+
+}
+
+@keyframes desaparece {
+    from {
+        opacity: 1;
+        scale: 1;
+
+    }
+
+    to {
+        opacity: 0;
+        scale: .5;
+    }
+}
+
+@keyframes bordesRGB {
+    0% {
+        border-color: red;
+    }
+
+    33% {
+        border-color: green;
+    }
+
+    66% {
+        border-color: blue;
+    }
+
+    100% {
+        border-color: red;
+    }
+
+    
+
+}
+
+@keyframes sombra80s {
+  0%   { box-shadow: 0 0 50px #ff4dc4; }   
+  33%  {box-shadow: 0 0 50px #00e6ff; }   
+  66%  { box-shadow: 0 0 50px #faff00; }   
+  100% { box-shadow: 0 0 50px #ff4dc4; }
+}
+
+@keyframes bordes80s {
+  0%   { border-color: #ff4dc4; }   
+  33%  {border-color: #00e6ff; }   
+  66%  { border-color:  #faff00; }   
+  100% { border-color:  #ff4dc4; }
+}
+
+@media (max-width:700px) {
+    .divImg {
+        flex-direction: column;
+    }
+
+    .divImg img:hover,
+    .divImg img {
+        filter: none;
+        transform: none;
+        transition: none;
+    }
+}

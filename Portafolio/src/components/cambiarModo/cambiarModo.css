@@ -16,3 +16,10 @@ option{
     color: black;
     background-color: transparent;
 }
+
+@media (max-width:500px) {
+    .cambiarModo{
+        position: absolute;
+        font-size: 10px;
+    }
+}

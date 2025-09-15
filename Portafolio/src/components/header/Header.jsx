@@ -1,23 +1,31 @@
-import styles from "./header.module.css"
-import fotoPerfil from "../../../public/foto-perfil.jpg"
-const Header = ()=>{
-    const navCV= ()=>{
-        open("https://www.canva.com/design/DAFwfmZPpQg/xigmmOPFLFMk3tyVvfMIiA/edit?utm_content=DAFwfmZPpQg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton","_blank")
+import "./header.css"
+
+import fotoPerfil from "../../../public/foto-perfil.png"
+import { useContext } from "react"
+import { modeContext } from "../../context/ModeContext"
+
+const Header = () => {
+
+    const { mode } = useContext(modeContext)
+
+    const navCV = () => {
+        open("https://www.canva.com/design/DAFwfmZPpQg/xigmmOPFLFMk3tyVvfMIiA/edit?utm_content=DAFwfmZPpQg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton", "_blank")
     }
-    return(
-        <header>
-            <div className={styles.img_name}>
-                <img src={fotoPerfil} alt="" />
-                <h1>
+    return (
+        <header style={mode.header}>
+
+            <div className="img_name" >
+                <img src={fotoPerfil} style={{...mode.perfilAnimation,...mode.img}} alt="" />
+                <h1 style={mode.text} >
                     Fernando Koss
                 </h1>
             </div>
-            <ul className={styles.nav}>
-                <li>Inicio</li>
-                <li>Sobre Mi</li>
-                <li>Educacion</li>
-                <li>Contacto</li>
-                <li onClick={navCV} >CV</li>
+            <ul className="nav">
+                <li style={mode.text} >Inicio</li>
+                <li style={mode.text} >Sobre Mi</li>
+                <li style={mode.text} >Educacion</li>
+                <li style={mode.text} >Contacto</li>
+                <li style={mode.text} onClick={navCV} >CV</li>
             </ul>
         </header>
     )

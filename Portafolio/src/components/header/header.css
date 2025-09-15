@@ -4,7 +4,6 @@ header{
     align-items: center;
     width: 100%;
     color: white;
-    background-color: rgba(0, 0, 0, 0.82);
     padding: 20px 0;
     z-index: 1;
     animation:desaparecePerfil;
@@ -53,7 +52,7 @@ h1{
     
 } 
 
-@media (max-width:670px) {
+@media (max-width:800px) {
     header{
         flex-direction: column;
         gap: 20px;
@@ -89,6 +88,35 @@ h1{
     }
 }
 
+@keyframes perfilLight{
+        0%{
+        border-color: #00b359;
+    }
+    33%{
+        border-color:  #ff6600;
+    }
+    66%{
+        border-color:  #00ffff;
+    }
+    100%{
+        border-color:  #00b359;
+    }
+}
+
+@keyframes perfil80s {
+  0%   { border-color: #ff4dc4; }   
+  33%  { border-color: #00e6ff; }   
+  66%  { border-color: #faff00; }   
+  100% { border-color: #ff4dc4; }
+}
+
+@keyframes sombra80s {
+  0%   { box-shadow: 0 0 50px #ff4dc4; }   
+  33%  {box-shadow: 0 0 50px #00e6ff; }   
+  66%  { box-shadow: 0 0 50px #faff00; }   
+  100% { box-shadow: 0 0 50px #ff4dc4; }
+}
+
 @keyframes desaparecePerfil {
     from{
         opacity: 1;
@@ -113,5 +141,20 @@ h1{
     }
     100%{
         box-shadow: 0 0 50px red;
+    }
+}
+
+@keyframes sombraLight {
+        0%{
+        box-shadow: 0 0 50px #00b359;
+    }
+    33%{
+        box-shadow: 0 0 50px #ff6600;
+    }
+    66%{
+        box-shadow: 0 0 50px #00ffff;
+    }
+    100%{
+        box-shadow: 0 0 50px #00b359;
     }
 }

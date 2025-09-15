@@ -1,6 +1,12 @@
 import { useContext } from "react"
 import "./main.css"
 import { modeContext } from "../../context/ModeContext"
+import html from "../../../public/html.png"
+import css from "../../../public/css.png"
+import js from "../../../public/js.png"
+import react from "../../../public/react.png"
+import cSharp from "../../../public/csharp.png"
+import net from "../../../public/.net.svg"
 const Main = () => {
 
 const {mode} = useContext(modeContext)
@@ -37,15 +43,15 @@ const {mode} = useContext(modeContext)
                 <h2 style={mode.text} >Lenguajes</h2>
                 <h3 style={mode.text} >Frontend:</h3>
                 <div className="divImg">
-                    <div><img style={{ height: "60px" }} src="https://cdn-icons-png.flaticon.com/256/5968/5968267.png" alt="" /> <p style={mode.text} >HTML</p></div>
-                    <div><img style={{ height: "60px" }} src="https://cdn-icons-png.flaticon.com/256/5968/5968242.png" alt="" /> <p style={mode.text} >CSS</p> </div>
-                    <div><img src="https://i.imgur.com/IgwKCEI.png" alt="" /><p style={mode.text} >JS</p> </div>
-                    <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png" alt="" /><p style={mode.text} >React</p></div>
+                    <div><img src={html} alt="" /> <p style={mode.text} >HTML</p></div>
+                    <div><img src={css} alt="" /> <p style={mode.text} >CSS</p> </div>
+                    <div><img src={js} alt="" /><p style={mode.text} >JS</p> </div>
+                    <div><img src={react} alt="" /><p style={mode.text} >React</p></div>
                 </div>
                 <h3 style={mode.text} >Backend:</h3>
                 <div className="divImg">
-                    <div><img src="https://cdn.jsdelivr.net/npm/@programming-languages-logos/csharp@0.0.0/csharp_256x256.png" alt="" /> <p style={mode.text} >C#</p> </div>
-                    <div><img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg" alt="" /> <p style={mode.text} >.NET</p> </div>
+                    <div><img src={cSharp} alt="" /> <p style={mode.text} >C#</p> </div>
+                    <div><img src={net} alt="" /> <p style={mode.text} >.NET</p> </div>
                 </div>
             </div>
         </div>

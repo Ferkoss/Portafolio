@@ -47,14 +47,15 @@ text-align: center;
     width: 80%;
     height: 25px;
     max-width: 300px;
-    padding-left:20px ;
+    padding-left:10px ;
 }
 .mandarMail textarea{
     border-radius: 15px;
     width: 80%;
     max-width: 300px;
     height: 180px;
-    padding-left:20px ;
+    padding-left:10px ;
+    padding-top: 10px;
     resize: none;
     color: black;
 }

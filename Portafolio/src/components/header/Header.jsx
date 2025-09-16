@@ -8,24 +8,22 @@ const Header = () => {
 
     const { mode } = useContext(modeContext)
 
-    const navCV = () => {
-        open("https://www.canva.com/design/DAFwfmZPpQg/xigmmOPFLFMk3tyVvfMIiA/edit?utm_content=DAFwfmZPpQg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton", "_blank")
-    }
+
     return (
-        <header style={mode.header}>
+        <header style={mode.header} id="inicio">
 
             <div className="img_name" >
-                <img src={fotoPerfil} style={{...mode.perfilAnimation,...mode.img}} alt="" />
+                <img src={fotoPerfil} style={{ ...mode.perfilAnimation, ...mode.img }} alt="" />
                 <h1 style={mode.text} >
                     Fernando Koss
                 </h1>
             </div>
             <ul className="nav">
-                <li style={mode.text} >Inicio</li>
-                <li style={mode.text} >Sobre Mi</li>
-                <li style={mode.text} >Educacion</li>
-                <li style={mode.text} >Contacto</li>
-                <li style={mode.text} onClick={navCV} >CV</li>
+                <li  ><a className={`nav-${mode.type}`} style={mode.text} href="#inicio">Inicio</a></li>
+                <li  ><a className={`nav-${mode.type}`} style={mode.text} href="#sobre-mi">Sobre Mi</a></li>
+                <li  ><a className={`nav-${mode.type}`} style={mode.text} href="#proyectos">Proyectos</a></li>
+                <li  ><a className={`nav-${mode.type}`} style={mode.text} href="#contacto">Contacto</a></li>
+                <li ><a className={`nav-${mode.type}`} style={mode.text} target="_blank" href="https://drive.google.com/file/d/187uzUZ6qOREjQNqUGc_DwbpHbplZUv_I/view?usp=sharing">CV</a></li>
             </ul>
         </header>
     )

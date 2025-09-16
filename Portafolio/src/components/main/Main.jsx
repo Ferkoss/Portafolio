@@ -14,16 +14,16 @@ const {mode} = useContext(modeContext)
 
     return <main style={{...mode.sombraAnimation,...mode.main}}>
         <div className="divAnimation">
-            <div className={`content content-${mode.type}`} style={mode.content}>
+            <div id="sobre-mi" className={`content content-${mode.type}`} style={mode.content}>
                 <h2 style={mode.text} >Sobre Mi</h2>
                 <p style={mode.text} >Mi nombre es Fernando Koss, soy Técnico Universitario en Programación egresado de la UTN y actualmente estudio la carrera de Licenciatura en Ciencias de la Computación (LCC) en la UNR. {<br />}
                     Me apasiona la tecnología, la resolución de problemas y el desarrollo de software. Me destaco por mi compromiso, capacidad de aprendizaje y predisposición para trabajar en equipo, siempre con el objetivo de aportar soluciones eficientes e innovadoras. Busco seguir creciendo profesionalmente y consolidar mi experiencia en el área de la programación y las ciencias de la computación.</p>
             </div>
         </div>
         <div className="divAnimation"  >
-
-            <div className={`content content-${mode.type}`} style={mode.content}>
-                <h2 style={mode.text} >Educacion</h2>
+            <br id="educacion"/>
+            <div  className={`content content-${mode.type}`} style={mode.content}>
+                <h2  style={mode.text} >Educacion</h2>
                 <div className="divEdu">
                     <div>
                         <h3 style={mode.text} >Técnico Universitario en Programación</h3>
@@ -39,7 +39,7 @@ const {mode} = useContext(modeContext)
             </div>
         </div>
         <div className="divAnimation">
-            <div className={`content content-${mode.type}`} style={mode.content}>
+            <div id="lenguajes" className={`content content-${mode.type}`} style={mode.content}>
                 <h2 style={mode.text} >Lenguajes</h2>
                 <h3 style={mode.text} >Frontend:</h3>
                 <div className="divImg">
@@ -56,7 +56,7 @@ const {mode} = useContext(modeContext)
             </div>
         </div>
         <div className="divAnimation">
-            <div className={`content content-${mode.type}`} style={mode.content}>
+            <div id="proyectos" className={`content content-${mode.type}`} style={mode.content}>
                 <h2 style={mode.text} >Proyectos</h2>
 
                 <div>

@@ -1,6 +1,7 @@
 import "./cambiarModo.css"
 import { modeContext } from "../../context/ModeContext"
 import { useContext } from "react"
+import fondoMatrix from "../../../public/fondo-matrix.gif"
 const CambiarModo = () => {
 
     const { mode, setMode } = useContext(modeContext)
@@ -21,9 +22,9 @@ const CambiarModo = () => {
                 content: { backgroundColor: "black" },
 
                 text: { color: "#ccc" },
-                select:{
-                    borderColor:"white",
-                    color:"white"
+                select: {
+                    borderColor: "white",
+                    color: "white"
                 }
 
             })
@@ -40,14 +41,14 @@ const CambiarModo = () => {
                     backgroundColor: "#ccc"
                 },
 
-                select:{
-                    borderColor:"black",
-                    color:"black"
+                select: {
+                    borderColor: "black",
+                    color: "black"
                 },
 
-                botonSend:{
-                    borderColor:"black",
-                    color:"black"
+                botonSend: {
+                    borderColor: "black",
+                    color: "black"
                 },
 
                 sombraAnimation: {
@@ -85,14 +86,14 @@ const CambiarModo = () => {
                     backgroundColor: "#2d2d44", // gris azulado oscuro como base ochentera
                 },
 
-                select:{
-                    borderColor:"#00e6ff",
-                    color:"#00e6ff"
+                select: {
+                    borderColor: "#00e6ff",
+                    color: "#00e6ff"
                 },
 
-                 botonSend:{
-                    borderColor:"#00e6ff",
-                    color:"#00e6ff"
+                botonSend: {
+                    borderColor: "#00e6ff",
+                    color: "#00e6ff"
                 },
 
                 sombraAnimation: {
@@ -124,72 +125,73 @@ const CambiarModo = () => {
             })
                 break
             case "m": setMode({
-                
+
                 type: "matrix",
 
-                main:{
+                main: {
                     backgroundColor: "rgba(0, 0, 0, 0.8)",
-                    boxShadow:"0 0 100px green"
+                    boxShadow: "0 0 100px green"
                 },
 
-                header:{
+                header: {
                     backgroundColor: "rgba(0, 0, 0, 0.9)"
                 },
 
-                footer:{
+                footer: {
                     backgroundColor: "rgba(0, 0, 0, 0.9)"
                 },
 
-                separador:{
+                separador: {
                     backgroundColor: "green"
                 },
 
-                img:{
-                    border:"2px solid green",
-                    boxShadow:"0 0 100px green"
+                img: {
+                    border: "2px solid green",
+                    boxShadow: "0 0 100px green"
                 },
 
                 layout: {
-                backgroundColor: "none",
-                backgroundImage: "url('../../../public/the matrix GIF.gif')",
-            },
-
-            select:{
-                    borderColor:"rgb(118, 255, 3)",
-                    color:"rgb(118, 255, 3)"
+                    backgroundColor: "none",
+                    backgroundImage: `URL(${fondoMatrix})`,
                 },
 
-                 botonSend:{
-                     borderColor:"rgb(118, 255, 3)",
-                    color:"rgb(118, 255, 3)"
+                select: {
+                    borderColor: "rgb(118, 255, 3)",
+                    color: "rgb(118, 255, 3)"
+                },
+
+                botonSend: {
+                    borderColor: "rgb(118, 255, 3)",
+                    color: "rgb(118, 255, 3)"
                 },
 
                 sombraAnimation: {
-                animationName: "sombraMatrix",
-                animationDuration: "6s",
-                animationIterationCount: "infinite",
-            },
+                    animationName: "sombraMatrix",
+                    animationDuration: "6s",
+                    animationIterationCount: "infinite",
+                },
 
                 backgroundAnimation: {
-                animationName: "BackgroundMatrix",
-                animationDuration: "8s",
-                animationIterationCount: "infinite",
-            },
+                    animationName: "BackgroundMatrix",
+                    animationDuration: "8s",
+                    animationIterationCount: "infinite",
+                },
 
                 perfilAnimation: {
-                animationName: "perfilMatrix,sombraMatrix",
-                animationDuration: "7s",
-                animationIterationCount: "infinite",
-            },
+                    animationName: "perfilMatrix,sombraMatrix",
+                    animationDuration: "7s",
+                    animationIterationCount: "infinite",
+                },
 
                 content: {
-                backgroundColor: "#111111", // gris oscuro casi negro
-                borderColor: "#00ff41",     // verde neón clásico de Matrix
-            },
+                    backgroundColor: "#111111", 
+                    borderColor: "#00ff41",     
+                },
 
                 text: {
-                color: "#76ff03", // verde lima brillante para contraste
-            },})
+                    color: "#76ff03", 
+                },
+            })
 
 
             default:
@@ -197,7 +199,7 @@ const CambiarModo = () => {
     }
 
     return (
-        <select  style={mode.select} name="" className="cambiarModo" onChange={changeMode}>
+        <select style={mode.select} name="" className="cambiarModo" onChange={changeMode}>
             <option value="o">Oscuro</option>
             <option value="c">Claro</option>
             <option value="80s">80s</option>

@@ -23,7 +23,7 @@ setName("")
 setMessage("")
     }
 
-    return (<footer style={mode.footer}>
+    return (<footer id="contacto" style={mode.footer}>
         <div className={styles.contacto}>
             <h3 style={mode.text} >Contacto:</h3>
             <div>

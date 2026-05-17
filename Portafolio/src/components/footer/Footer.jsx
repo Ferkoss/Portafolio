@@ -21,6 +21,7 @@ email_id: email,
 setEmail("")
 setName("")
 setMessage("")
+alert("Mensaje enviado correctamente")
     }
 
     return (<footer id="contacto" style={mode.footer}>

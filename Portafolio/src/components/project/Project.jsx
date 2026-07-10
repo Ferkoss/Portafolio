@@ -13,7 +13,7 @@ const {mode} = useContext(modeContext)
 
 
     return <div className="project-container">
-        <img className="project-img" src={img} alt="" />
+        <div className={`project-img project-img-${mode.type}`}><img  src={img} alt="" /></div>
         <div className="project-div">
             <h2 style={mode.text}>{title}</h2>
 

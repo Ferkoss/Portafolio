@@ -70,9 +70,26 @@
     width: 45%;
     height: 400px;
     border-radius: 15px;
+    overflow-y: auto;
+    scrollbar-color: black transparent;
     /* object-fit: cover; */
 }
 
+.project-img-dark{
+    scrollbar-color: #ccc transparent;
+}
+
+.project-img-80s{
+    scrollbar-color:#ff4dc4 transparent;
+}
+
+.project-img-matrix{
+    scrollbar-color:rgb(118, 255, 3) transparent;
+}
+
+.project-img img{
+    width: 100%;
+}
 .sombra-80s:hover {
     box-shadow: 0 0 30px #00e6ff;
 

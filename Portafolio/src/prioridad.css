@@ -1,8 +1,15 @@
+*{
+        word-spacing: 0px;
+    }
+
+
+
 @media (max-width:500px) {
     *{
         word-spacing: -5px;
     }
     .sobreMi-text p{
+        word-spacing: 0px;
         font-size: 1rem;
     }
     .sobreMi-logos h5{

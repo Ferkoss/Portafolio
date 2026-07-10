@@ -11,7 +11,9 @@ header{
  animation-range:exit 0;
 }
 
-
+a{
+    color: #ccc;
+}
 
 .img_name{
     display: flex;
@@ -32,7 +34,7 @@ header{
 }
 
 h1{
-    cursor: pointer;
+    font-weight: 600;
 }
 
 .nav{
@@ -47,10 +49,10 @@ h1{
 }
 
 
- .nav li:hover{
-    box-shadow: 0 2px 0 0 white;
+ /* .nav li:hover{
+    box-shadow: 0 2px 0 0 #ccc;
     
-} 
+}  */
 
 
 .nav-light:hover{

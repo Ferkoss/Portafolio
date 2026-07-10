@@ -9,12 +9,31 @@
     outline: none;
     font-weight: bold;
     background-color: transparent;
+    border-radius: 10px;
+}
+
+
+
+.opt-dark{
+    color: #ccc;
+    background-color: black;
     
 }
 
-option{
+.opt-light{
     color: black;
-    background-color: transparent;
+    background-color: #ccc;
+    
+}
+
+.opt-80s{
+    background-color: #2d2d44;
+    color:#00e6ff;
+}
+
+.opt-matrix{
+    background-color: black;
+    color: rgb(118, 255, 3);
 }
 
 @media (max-width:500px) {

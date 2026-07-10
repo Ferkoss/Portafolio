@@ -1,0 +1,201 @@
+.sobreMi-data {
+    display: flex;
+    align-items: center;
+}
+
+.sobreMi h2
+{
+    margin:0;
+}
+
+.sobreMi-text {
+    flex: 1;
+    max-width: 620px;
+    line-height: 1.8;
+    min-width: 0;
+    word-break: break-word; /* Corta la palabra si es estrictamente necesario */
+  overflow-wrap: anywhere;
+}
+
+.sobreMi-div-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    
+}
+
+.sobreMi-img{
+    position: relative;
+    width: 100%;
+    height: 500px;
+
+    
+}
+
+.sobreMi-img-matrix{
+    filter: drop-shadow(0 0 100px black);
+}
+
+
+.sobreMi-div-logos {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+.sobreMi-logos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px;
+    border-right: 2px dashed;
+    flex: 1;
+    
+}
+.sobreMi-logos:last-child{
+    border-right: none;
+}
+
+.sobreMi-logos-80s{
+    animation-name: bordes80s;
+    animation-duration: var(--tiempoRGB);
+    animation-iteration-count: infinite;
+}
+
+.sobreMi-logos-dark{
+    animation-name: bordesRGB;
+    animation-duration: var(--tiempoRGB);
+    animation-iteration-count: infinite;
+}
+
+.sobreMi-logos-matrix{
+    border-color: rgb(118, 255, 3);
+}
+
+.sobreMi-logos-light{
+    border-color: black;
+}
+
+.sobreMi-logos h5 {
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+.sobreMi-icon {
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+.color-80s{
+    animation-name: color80s;
+    animation-duration: var(--tiempoRGB);
+    animation-iteration-count: infinite;
+}
+
+.color-dark{
+    animation-name: colorRGB;
+    animation-duration: var(--tiempoRGB);
+    animation-iteration-count: infinite;
+}
+
+.color-light{
+    color: #2962FF;
+}
+
+.color-matrix{
+    color:#00BCD4;
+}
+
+.sobreMi-sep{
+width: 75%;
+height: 1px;
+opacity: .6;
+}
+
+@keyframes bordes80s {
+    0% {
+        border-color: #ff4dc4;
+    }
+
+    33% {
+        border-color: #00e6ff;
+    }
+
+    66% {
+        border-color: #faff00;
+    }
+
+    100% {
+        border-color: #ff4dc4;
+    }
+}
+
+@keyframes color80s {
+    0% {
+        color: #ff4dc4;
+    }
+
+    33% {
+        color: #00e6ff;
+    }
+
+    66% {
+        color: #faff00;
+    }
+
+    100% {
+        color: #ff4dc4;
+    }
+}
+
+@keyframes bordesRGB {
+    0% {
+        border-color: red;
+    }
+
+    33% {
+        border-color: green;
+    }
+
+    66% {
+        border-color: blue;
+    }
+
+    100% {
+        border-color: red;
+    }
+
+}
+
+@keyframes colorRGB {
+    0% {
+        color: red;
+    }
+
+    33% {
+        color: green;
+    }
+
+    66% {
+        color: blue;
+    }
+
+    100% {
+        color: red;
+    }
+}
+
+
+@media (max-width:800px) {
+    .sobreMi-data{
+        flex-direction: column;
+    }
+    
+    
+}

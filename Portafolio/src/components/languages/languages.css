@@ -1,0 +1,27 @@
+.lang-badge{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    font-size: 20px;
+    border: 2px solid ;
+    border-radius: 10px;
+    gap:10px;
+    filter: opacity(.8);
+    transition: transform .5s;
+    cursor:default;
+}
+
+.lang-badge:hover{
+    transform: translateY(-3px);
+}
+
+.lang-badge img{
+border-radius: 0;
+width: 1.2em;
+height: 1.2em;
+}
+
+
+
+

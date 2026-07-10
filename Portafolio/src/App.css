@@ -24,14 +24,23 @@
   transition: background-color 2s;
 }
 
+path{
+  color: currentcolor;
+}
+
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: monospace, sans-serif;
   color:#ccc;
+  font-weight: 600;
 
 }
+
+
+
+
 
 input{
   color: black;
@@ -46,7 +55,6 @@ input{
 :root{
   --tiempoRGB:7s;
 }
-
 
 
 

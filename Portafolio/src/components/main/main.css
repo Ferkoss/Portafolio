@@ -32,12 +32,17 @@ main {
     border-radius: 20px;
     line-height: 30px;
     transform: scale(1);
-    cursor: pointer;
+    /* cursor: pointer; */
     color: #ccc;
     background-position: 0% 50%, 100% 50%;
     transition: transform 1s,background-color 1s;
     width: 100%;
     
+}
+
+.content h2{
+    font-weight: bold;
+    font-size: 40px;
 }
 
 .divAnimation{
@@ -116,62 +121,14 @@ main {
 }
 
 
-.divEdu {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 50px;
-}
 
-.divEdu div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.divEdu img {
-    align-self: center;
-    filter: drop-shadow(0 0 20px white);
-    width: 150px;
-    height: 150px;
-    margin-top: 20px;
-}
 
 .content h3 {
     font-size: 23px;
+    font-weight: 600;
 }
 
-.divImg {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 30px;
-}
 
-.divImg img {
-    height: 50px;
-    filter: grayscale(1);
-    transition: filter 1s;
-}
-
-.divImg div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 1s;
-}
-
-.divImg div:hover {
-    transform: scale(1.5);
-    transition: transform 1s;
-}
-
-.divImg img:hover {
-    filter: none;
-    transition: filter 1s;
-}
 
 /* main div:first-child,main div:hover{
     animation: bordesRGB;
@@ -190,7 +147,6 @@ main div p {
 main div h2 {
     font-size: 30px;
 }
-
 
 
 @keyframes sombra {
@@ -294,15 +250,12 @@ main div h2 {
   100% { border-color:  #ff4dc4; }
 }
 
-@media (max-width:700px) {
-    .divImg {
-        flex-direction: column;
-    }
-
-    .divImg img:hover,
-    .divImg img {
-        filter: none;
+@media (max-width:800px) {
+    .content:hover{
         transform: none;
-        transition: none;
+    }
+    .divAnimation
+    {
+        animation: none;
     }
 }

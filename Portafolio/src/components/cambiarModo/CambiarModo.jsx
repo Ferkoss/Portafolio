@@ -2,9 +2,15 @@ import "./cambiarModo.css"
 import { modeContext } from "../../context/ModeContext"
 import { useContext } from "react"
 import fondoMatrix from "../../../public/fondo-matrix.gif"
+
+
+
+
 const CambiarModo = () => {
 
     const { mode, setMode } = useContext(modeContext)
+
+    
 
     const changeMode = (e) => {
         switch (e.target.value) {
@@ -93,7 +99,8 @@ const CambiarModo = () => {
 
                 botonSend: {
                     borderColor: "#00e6ff",
-                    color: "#00e6ff"
+                    color: "#00e6ff",
+                    
                 },
 
                 sombraAnimation: {
@@ -199,11 +206,12 @@ const CambiarModo = () => {
     }
 
     return (
+
         <select style={mode.select} name="" className="cambiarModo" onChange={changeMode}>
-            <option value="o">Oscuro</option>
-            <option value="c">Claro</option>
-            <option value="80s">80s</option>
-            <option value="m">Matrix</option>
+            <option className={`opt-${mode.type}`} value="o">Oscuro</option>
+            <option className={`opt-${mode.type}`} value="c">Claro</option>
+            <option className={`opt-${mode.type}`} value="80s">80s</option>
+            <option className={`opt-${mode.type}`} value="m">Matrix</option>
         </select>
     )
 }

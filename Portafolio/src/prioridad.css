@@ -1,0 +1,27 @@
+@media (max-width:500px) {
+    *{
+        word-spacing: -5px;
+    }
+    .sobreMi-text p{
+        font-size: 1rem;
+    }
+    .sobreMi-logos h5{
+        font-size: 0.625rem;
+    }
+    .edu-data h3{
+       
+        font-size: .8rem;
+        word-spacing: -4px;
+        
+    }
+    .edu-text p{
+        font-size: .8rem;
+        word-spacing: 0px;
+    }
+    .project-div h2{
+        font-size: 2rem;
+    }
+    .project-div p{
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,164 @@
+.project-container {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    /* gap:10px; */
+    /* height:350px; */
+    width: 100%;
+    /* border:1px solid red; */
+    padding: 10px;
+}
+
+.project-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 50%;
+    min-height: 400px;
+}
+
+.project-div h2 {
+
+    width: 100%;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.project-div p {
+    width: 100%;
+    /* margin-bottom: 20px; */
+    font-weight: bold;
+
+}
+
+.project-div-button {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    /* width: 100%; */
+    /* margin-top: 20px; */
+    flex-wrap: wrap;
+}
+
+.project-button {
+    font-weight: bold;
+    /*height: 30px;*/
+    padding: 10px;
+    background-color: transparent;
+    border: 3px solid #ccc;
+
+    border-radius: 15px;
+    cursor: pointer;
+    max-width: 250px;
+    height: 50px;
+    font-size: 20px;
+
+
+    transition: transform 1s, box-shadow 1s;
+}
+
+.project-button:hover {
+    transform: scale(1.07);
+    transition: transform 1s, box-shadow 1s;
+
+}
+
+.project-img {
+    width: 45%;
+    height: 400px;
+    border-radius: 15px;
+    /* object-fit: cover; */
+}
+
+.sombra-80s:hover {
+    box-shadow: 0 0 30px #00e6ff;
+
+}
+
+.sombra-dark:hover {
+    box-shadow: 0 0 30px white;
+}
+
+.sombra-light:hover {
+    box-shadow: 0 0 30px black;
+}
+
+.sombra-matrix:hover {
+    box-shadow: 0 0 30px rgb(118, 255, 3);
+}
+
+.languages {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    /* align-self: center;
+    width: 100%; */
+    flex-wrap: wrap;
+    
+}
+
+.proj-a{
+    filter: opacity(.8);
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.proj-ico{
+    margin-right: 5px;
+    font-size: 20px;
+    margin: 5px;
+}
+@media (max-width:800px) {
+    .project-container {
+        flex-direction: column;
+
+    }
+
+    .project-img {
+        width: 100%;
+
+        max-width: none;
+        max-height: none;
+
+    }
+
+    .project-div {
+        width: 100%;
+        margin-top: 15px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .project-div h2 {
+        text-align: center;
+
+    }
+
+    .project-div p {
+        text-align: center;
+
+    }
+
+    .project-div-button {
+        width: 100%;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .project-button {
+        width: 40%;
+        min-width: 170px;
+    }
+
+    .languages {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}

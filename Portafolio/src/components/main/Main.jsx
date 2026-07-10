@@ -2,8 +2,10 @@ import { useContext } from "react"
 import "./main.css"
 import imageUtn from "../../../public/logoutn.png"
 import imageUnr from "../../../public/logounr.png"
+import cyb from "../../../public/Projects/CYB/PAG.PNG"
+import gym from "../../../public/Projects/GYM/GYM.jpg"
+import cotizador from "../../../public/projects/cotizador/cotizador.png"
 import { modeContext } from "../../context/ModeContext"
-
 import Project from "../project/Project"
 import Separador from "../separador/Separador"
 import Education from "../education/Education"
@@ -27,7 +29,7 @@ const Main = () => {
                 <Project
                     title={"Gestor de ventas"}
                     text={"Aplicación para gestionar ventas, clientes, productos y reportes."}
-                    img={"/Portafolio/public/Projects/CYB/PAG.PNG"}
+                    img={cyb}
                     linkPage={"https://ferkoss.github.io/cyb/"}
                     linkFront={"https://github.com/Ferkoss/cyb"}
                     linkBack={"https://github.com/Ferkoss/cyb-api"}
@@ -40,7 +42,7 @@ const Main = () => {
                 <Project
                     title={"Gestor de Reservas para un Gimnasio"}
                     text={"Aplicación para gestionar las reservas de turnos de un Gimnasio."}
-                    img={"/Portafolio/public/Projects/GYM/GYM.jpg"}
+                    img={gym}
                     linkFront={"https://github.com/Agustin-Castelli/Gym-UTNegger-React"}
                     linkBack={"https://github.com/GiulianoPairone1/BackendGimnasio"}
                     lang={["R", ".NET"]}
@@ -50,7 +52,7 @@ const Main = () => {
                 <Project
                     title={"Cotizador de monedas"}
                     text={"Aplicacion que proyecta las modificaciones de las cotizaciones monetarias."}
-                    img={imageUnr}
+                    img={cotizador}
                     linkPage={"https://ferkoss.github.io/TP-Integrador/HTML/index.html"}
                     linkFront={"https://github.com/Ferkoss/TP-Integrador"}
                     lang={["HTML", "CSS", "JS"]}

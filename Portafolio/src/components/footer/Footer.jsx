@@ -8,20 +8,36 @@ const Footer = () => {
     const [name,setName]=useState("");
     const [email,setEmail]=useState("");
     const [message,setMessage]=useState("");
+    const [loading,setLoading]=useState(false);
+    const [status,setStatus]=useState("");
     
     const enviarMail = (e) =>{
         e.preventDefault()
-        emailjs.send("service_n2lxghc","template_l0x5k8k",{
-from_name: name,
-message: message,
-email_id: email,
-},
-"tvR12jHg4Tez_c-w3"
-);
-setEmail("")
-setName("")
-setMessage("")
-alert("Mensaje enviado correctamente")
+        setLoading(true)
+        setStatus("")
+        
+        emailjs.send(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            {
+                from_name: name,
+                message: message,
+                email_id: email,
+            },
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+        .then((response) => {
+            setEmail("")
+            setName("")
+            setMessage("")
+            setStatus("success")
+            setLoading(false)
+        })
+        .catch((error) => {
+            console.error("Error al enviar:", error)
+            setStatus("error")
+            setLoading(false)
+        })
     }
 
     return (<footer id="contacto" style={mode.footer}>
@@ -39,10 +55,12 @@ alert("Mensaje enviado correctamente")
         <div className={styles.escribime}>
             <h3 style={mode.text} >Enviar consulta</h3>
             <form className={styles.mandarMail} onSubmit={enviarMail}>
-                <div><label style={mode.text} htmlFor="">Nombre Completo: </label><input required type="text" value={name} onChange={(e)=>{setName(e.target.value)}}/></div>
-                <div><label style={mode.text} htmlFor="">Email: </label><input required type="email" value={email} onChange={(e)=>{setEmail(e.target.value)}}/></div>
-                <div><label style={mode.text} htmlFor="">Mensaje: </label><textarea required name="" id="" value={message} onChange={(e)=>{setMessage(e.target.value)}}></textarea></div>
-                <button type="submit" style={mode.botonSend} >Enviar</button>
+                <div><label style={mode.text} htmlFor="">Nombre Completo: </label><input required type="text" value={name} onChange={(e)=>{setName(e.target.value)}} disabled={loading}/></div>
+                <div><label style={mode.text} htmlFor="">Email: </label><input required type="email" value={email} onChange={(e)=>{setEmail(e.target.value)}} disabled={loading}/></div>
+                <div><label style={mode.text} htmlFor="">Mensaje: </label><textarea required name="" id="" value={message} onChange={(e)=>{setMessage(e.target.value)}} disabled={loading}></textarea></div>
+                <button type="submit" style={mode.botonSend} disabled={loading}>{loading ? "Enviando..." : "Enviar"}</button>
+                {status === "success" && <p style={{color: "green", marginTop: "10px"}}>✅ Mensaje enviado correctamente</p>}
+                {status === "error" && <p style={{color: "red", marginTop: "10px"}}>❌ Error al enviar. Intenta de nuevo.</p>}
             </form>
         </div>
 
